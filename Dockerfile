@@ -13,7 +13,7 @@ RUN apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certif
 #RUN add-apt-repository ppa:oibaf/graphics-drivers -y
 RUN apt-get dist-upgrade -yqq
 RUN apt-get install -yqq wget aria2 ffmpeg telnet tree
-RUN cd /usr/local/bin && aria2c --check-certificate=false "https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz" && bash tar --strip 1 -xzf ffmpeg-git-amd64-static.tar.xz && rm ffmpeg-git-amd64-static.tar.xz && /usr/local/bin/ffmpeg -version
+#RUN cd /usr/local/bin && aria2c --check-certificate=false "https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz" && bash tar --strip 1 -xzf ffmpeg-git-amd64-static.tar.xz && rm ffmpeg-git-amd64-static.tar.xz && /usr/local/bin/ffmpeg -version
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
