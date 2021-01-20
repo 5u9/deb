@@ -9,7 +9,7 @@ CMD ["/bin/bash"]
 RUN apt-get update
 RUN apt-get dist-upgrade -yqq
 RUN apt-get install -yqq apt-utils
-RUN apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip speedtest-cli
+RUN apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common nano wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip speedtest-cli
 #RUN add-apt-repository ppa:oibaf/graphics-drivers -y
 RUN apt-get dist-upgrade -yqq
 RUN apt-get install -yqq wget aria2 ffmpeg telnet tree
